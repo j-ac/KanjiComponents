@@ -55,7 +55,7 @@ readings = ["チョウ", "ジョウ"]
 [[useful]]
 component = "刀, 刂"
 used_in = ["召", "招", "沼", "昭", "紹", "詔", "超", "照"]
-readings = [""]
+readings = ["ショウ"]
 
 [[non-useful]]
 component = "人"
