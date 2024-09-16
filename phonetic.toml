@@ -1,0 +1,69 @@
+# This document aims to be a complete list of all valuable phonetic kanji components sourced
+# from Habein & Mathias' "The Complete Guide to Everyday Kanji." The book is a trove of information, 
+# this seeks to distill it down to only the information useful to a student of Japanese.
+
+#TEMPLATE
+[[useful]]
+component = ""
+used_in = ["", "", ""]
+readings = [""]
+
+[[non-useful]]
+component = ""
+used_in = ["", ""] # Some are dubious at best
+reason = ""
+
+#  ____ _____  _    ____ _____    ___  _____   _     ___ ____ _____
+# / ___|_   _|/ \  |  _ \_   _|  / _ \|  ___| | |   |_ _/ ___|_   _|
+# \___ \ | | / _ \ | |_) || |   | | | | |_    | |    | |\___ \ | |
+#  ___) || |/ ___ \|  _ < | |   | |_| |  _|   | |___ | | ___) || |
+# |____/ |_/_/   \_\_| \_\|_|    \___/|_|     |_____|___|____/ |_|
+
+# 1-Stroke
+[[non-useful]]
+component = "乙"
+used_in = ["礼"]
+reason = "only 1 kanji"
+
+# 2-Stroke
+[[useful]]
+component = "又"
+used_in = ["受", "授"]
+readings = ["ジュ"]
+
+[[non-useful]]
+component = "九"
+used_in = ["究, 軌"]
+reason = "poor reading agreement."
+
+[[useful]]
+component = "七"
+used_in = ["切", "窃"]
+readings = ["セツ"]
+
+[[non-useful]]
+component = "十"
+used_in = ["汁", "針"]
+reason = "poor reading agreement"
+
+[[useful]]
+component = "丁"
+used_in = ["庁", "成", "町", "亭", "頂", "城", "盛", "貯"]
+readings = ["チョウ", "ジョウ"]
+
+[[useful]]
+component = "刀, 刂"
+used_in = ["召", "招", "沼", "昭", "紹", "詔", "超", "照"]
+readings = [""]
+
+[[non-useful]]
+component = "人"
+used_in = ["仁"]
+reason = "used in one kanji"
+
+[[non-useful]]
+component = "ニ"
+used_in = ["仁", "弐"]
+reason = "poor reading agreement."
+
+# 3-Stroke
