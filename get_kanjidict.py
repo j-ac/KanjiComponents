@@ -2,6 +2,7 @@
 import xml.etree.ElementTree as ET
 from typing import Dict, List
 
+# Generates a dictionary relating a kanji to it's on'yomi readings
 def get_readings_dictionary(verbose: bool = False) -> Dict[str, List[str]]:
     print("Processing kanjidic2.xml into an in-memory dictionary")
     # Path to kanjidic2.xml https://www.edrdg.org/wiki/index.php/KANJIDIC_Project
@@ -11,7 +12,6 @@ def get_readings_dictionary(verbose: bool = False) -> Dict[str, List[str]]:
     # Parse the XML file
     tree = ET.parse(kanjidic_file)
     root = tree.getroot()
-
     # Build dictionary in memory
     kanji_data = {}
     for character in root.findall('character'):
@@ -31,7 +31,6 @@ def get_readings_dictionary(verbose: bool = False) -> Dict[str, List[str]]:
         kanji_data[kanji] = {'on_readings': on_readings}
 
     print("Done!")
-    print(type(kanji_data))
     return kanji_data
 
 

@@ -4,7 +4,7 @@ import pprint
 
 default_path = "/var/lib/mecab/dic/unidic"
 def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = True) -> Dict:
-    tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}")
+    tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}") # Not sure how expensive this is. Oh well
     parsed = tagger.parse(text).split("\n")
 
     field_data = {}
@@ -17,6 +17,10 @@ def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = 
 
         # Meanings of each field can be found at
         # https://pypi.org/project/unidic/
+        if len(fields) < 28:
+            print(f"\"{word}\" did not have complete data.")
+            continue
+
         field_data[word]["pos1"] = fields[0]
         field_data[word]["pos2"] = fields[1]
         field_data[word]["pos3"] = fields[2]

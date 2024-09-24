@@ -1,5 +1,6 @@
+import MeCab
 import get_kanjidict
-import get_mecab_data
+import get_mecab_data as get_mecab
 
 import sys
 import pprint
@@ -51,11 +52,16 @@ def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tu
 
 
 
-def get_freqs():
-    print("TODO")
+def get_freqs(kanji_component, kanji_readings, kanji_dict):
+    path_to_unidic = "/var/lib/mecab/dic/unidic"
+    tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}")
+
+    with open(sys.argv[1], 'r') as corpus:
+        for sentence in corpus: 
+            get_mecab.get_mecab_data(sentence, verbose=False, tagger=tagger)
+ 
 
 
 kanji_component, kanji_readings = process_toml()
 kanji_dict = get_kanjidict.get_readings_dictionary()
-mecab_data = get_mecab_data.get_mecab_data()
-get_freqs(kanji_component, kanji_readings, kanji_dict, mecab_data)
+get_freqs(kanji_component, kanji_readings, kanji_dict)
