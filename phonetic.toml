@@ -4,15 +4,15 @@
 # this list is very much a WORK IN PROGRESS and does not nearly cover everything, but I hope to complete the phonetic component at minimum.
 
 #TEMPLATE
-[[useful]]
-component = ""
-used_in = ["", "", ""]
-readings = [""]
+#[[useful]]
+#component = ""
+#used_in = ["", "", ""]
+#readings = [""]
 
-[[non-useful]]
-component = ""
-used_in = ["", ""] # Some are dubious at best
-reason = ""
+#[[non-useful]]
+#component = ""
+#used_in = ["", ""] # Some are dubious at best
+#reason = ""
 
 #  ____ _____  _    ____ _____    ___  _____   _     ___ ____ _____
 # / ___|_   _|/ \  |  _ \_   _|  / _ \|  ___| | |   |_ _/ ___|_   _|
