@@ -3,8 +3,9 @@ import MeCab
 import pprint
 
 default_path = "/var/lib/mecab/dic/unidic"
-def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = True) -> Dict:
-    tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}") # Not sure how expensive this is. Oh well
+def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = True, tagger=None) -> Dict:
+    if tagger is None: # If no tagger is supplied this is created in a loop, wasting resources.
+        tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}")
     parsed = tagger.parse(text).split("\n")
 
     field_data = {}
