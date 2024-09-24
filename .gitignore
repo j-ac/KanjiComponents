@@ -1,2 +1,4 @@
 /dictionaries/*
 .python-version
+__pycache__/*
+*.svg

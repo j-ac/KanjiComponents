@@ -53,8 +53,7 @@ def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tu
 
 
 def get_freqs(kanji_component, kanji_readings, kanji_dict):
-    path_to_unidic = "/var/lib/mecab/dic/unidic"
-    tagger = MeCab.Tagger(f"-r /dev/null -d {path_to_unidic}")
+    tagger = MeCab.Tagger(f"-r /dev/null -d {get_mecab.default_path}")
 
     with open(sys.argv[1], 'r') as corpus:
         for sentence in corpus: 
