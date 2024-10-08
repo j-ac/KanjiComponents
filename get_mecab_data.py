@@ -1,4 +1,5 @@
 from typing import Dict
+import sys
 import MeCab
 import pprint
 
@@ -19,7 +20,8 @@ def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = 
         # Meanings of each field can be found at
         # https://pypi.org/project/unidic/
         if len(fields) < 28:
-            print(f"\"{word}\" did not have complete data.")
+            if verbose:
+                print(f"\"{word}\" did not have complete data.")
             continue
 
         field_data[word]["pos1"] = fields[0]
@@ -57,5 +59,11 @@ def get_mecab_data(text: str, path_to_unidic: str= default_path, verbose:bool = 
     return field_data
 
 if __name__ == "__main__":
-    print(f"Demoing get_mecab_data() with the input 銀行に行きます。")
-    get_mecab_data(text="銀行に行きます。")
+    if len(sys.argv) < 2:
+        text = "銀行に行きます。"
+    else:
+        text = sys.argv[1]
+
+
+    print(f"Demoing get_mecab_data() with the input {text}")
+    get_mecab_data(text)

@@ -1,9 +1,11 @@
 import MeCab
 import get_kanjidict
 import get_mecab_data as get_mecab
+import jp_utils as jp
 
 import sys
 import pprint
+import re
 import tomllib
 from typing import Dict, Tuple
 
@@ -11,6 +13,7 @@ MIN_VERSION = (3,11)
 if sys.version_info < MIN_VERSION:
     print(f"FAILURE: This script requires Python {MIN_VERSION[0]}.{MIN_VERSION[1]} or higher. Exiting.")
     sys.exit(1)
+
 
 def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tuple[Dict[str,str], Dict[str,str]]:
     # Read over the Toml and create a mapping from used_in -> component. And used_in -> readings list Eg:
@@ -49,7 +52,30 @@ def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tu
 
     return kanji_component, kanji_readings
 
+# Turns a word which may contain a mix of hiragana, katakana and kanji into just the readings of the kanji, in katakana.
+# Eg 楽しい -> タノ
+def word_to_kanji_readings(word, data):
+    # Example: 楽しい 
+    if "form" in data:
+        form = data["form"]                 # eg タノシイ
+    else:
+        return
 
+    kata = jp.hiragana_to_katakana(word)    # eg 楽しい　-> 楽シイ
+
+    regex_str = ""
+    for char in kata:
+        if jp.is_kanji(char):
+            regex_str += "(.*)"
+        else:
+            regex_str += char
+    
+    match = re.match(regex_str, form)
+
+    if match is not None and len(match.groups()) >= 1:
+        print(word)
+        pprint.pprint(match[1])
+        print("===")
 
 
 def get_freqs(kanji_component, kanji_readings, kanji_dict):
@@ -57,8 +83,10 @@ def get_freqs(kanji_component, kanji_readings, kanji_dict):
 
     with open(sys.argv[1], 'r') as corpus:
         for sentence in corpus: 
-            get_mecab.get_mecab_data(sentence, verbose=False, tagger=tagger)
- 
+            sentence_data = get_mecab.get_mecab_data(sentence, verbose=False, tagger=tagger)
+            for word in sentence_data.keys():
+                word_to_kanji_readings(word, sentence_data[word])
+                
 
 
 kanji_component, kanji_readings = process_toml()
