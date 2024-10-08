@@ -63,13 +63,27 @@ def word_to_kanji_readings(word, data):
 
     kata = jp.hiragana_to_katakana(word)    # eg 楽しい　-> 楽シイ
 
+    # Kanji within a word are always contiguous. So matching the first group of .* kanji will always grab the full set of kanji in the word.
     regex_str = ""
-    for char in kata:
-        if jp.is_kanji(char):
-            regex_str += "(.*)"
-        else:
-            regex_str += char
+    i = 0
+    # Append all non-kanji characters at onset, if any.
+    while i < len(kata) and not jp.is_kanji(kata[i]):
+        regex_str += kata[i]
+        i += 1
     
+    # Add capture group for all contiguous kanji
+    if i < len(kata) and jp.is_kanji(kata[i]):
+        regex_str += ("(.*)")
+        i += 1
+
+    # Skip over any additional kanji, as the previous capture group captures all contiguous
+    while i < len(kata) and jp.is_kanji(kata[i]):
+        i += 1
+
+    # append the rest of the string (if any)
+    regex_str += kata[i:]
+
+
     match = re.match(regex_str, form)
 
     if match is not None and len(match.groups()) >= 1:
