@@ -68,3 +68,7 @@ used_in = ["仁", "弐"]
 reason = "poor reading agreement."
 
 # 3-Stroke
+[[useful]]
+component = "干"
+used_in = ["刊", "汗", "肝", "軒", "幹", "岸"]
+readings = ["カン"]
