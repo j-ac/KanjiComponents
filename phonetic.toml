@@ -7,6 +7,7 @@
 #[[useful]]
 #component = ""
 #used_in = ["", "", ""]
+#not_useful_in = []
 #readings = [""]
 
 #[[non-useful]]
@@ -72,3 +73,23 @@ reason = "poor reading agreement."
 component = "干"
 used_in = ["刊", "汗", "肝", "軒", "幹", "岸"]
 readings = ["カン"]
+
+[[non-useful]]
+component = "弓"
+used_in = ["強", "窮"]
+reason = "poor reading agreement."
+
+# Before this point I was not tracking the not_useful_in tag. I should add it in sometime.
+
+[[useful]]
+component = "己"
+used_in = ["起","記", "忌", "改", "紀"]
+not_useful_in = ["妃"]
+readings = ["キ"]
+
+#p 129
+[[useful]]
+component = "工"
+used_in = ["功", "江", "攻", "空", "紅", "貢", "項", "控", "空"]
+not_useful_in = ["恐"]
+readings = ["ク", "クウ", "コウ"]
