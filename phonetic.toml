@@ -3,17 +3,17 @@
 # this seeks to distill it down to only the information useful to a student of Japanese.
 # this list is very much a WORK IN PROGRESS and does not nearly cover everything, but I hope to complete the phonetic component at minimum.
 
-#TEMPLATE
-#[[useful]]
-#component = ""
-#used_in = ["", "", ""]
-#not_useful_in = []
-#readings = [""]
+#TEMPLATES
+[[useful]]
+component = ""
+used_in = ["", "", ""]
+not_useful_in = []
+readings = [""]
 
-#[[non-useful]]
-#component = ""
-#used_in = ["", ""] # Some are dubious at best
-#reason = ""
+[[non-useful]]
+component = ""
+used_in = ["", ""]
+reason = ""
 
 #  ____ _____  _    ____ _____    ___  _____   _     ___ ____ _____
 # / ___|_   _|/ \  |  _ \_   _|  / _ \|  ___| | |   |_ _/ ___|_   _|
@@ -87,9 +87,75 @@ used_in = ["起","記", "忌", "改", "紀"]
 not_useful_in = ["妃"]
 readings = ["キ"]
 
-#p 129
 [[useful]]
 component = "工"
 used_in = ["功", "江", "攻", "空", "紅", "貢", "項", "控", "空"]
 not_useful_in = ["恐"]
 readings = ["ク", "クウ", "コウ"]
+
+[[useful]]
+component = "才"
+used_in = ["在", "材", "財", "栽", "裁", "載"]
+not_useful_in = []
+readings = ["サイ", "ザイ"]
+
+[[non-useful]]
+component = "土"
+used_in = ["仕"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "子"
+used_in = ["字"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "勺"
+used_in = ["的", "酌", "釣"]
+reason = "Poor reading agreement."
+
+[[useful]]
+component = "小"
+used_in = ["肖", "宵", "消", "硝"]
+not_useful_in = ["削"]
+readings = [""]
+
+[[non-useful]]
+component = "寸"
+used_in = ["村", "討"]
+reason = "Poor reading agreement."
+
+[[non-useful]]
+component = "夕"
+used_in = ["外"]
+reason = "Only used in one kanji."
+
+[[non-useful]]
+component = "山"
+used_in = ["仙"]
+reason = "Only used in one kanji."
+
+[[non-useful]]
+component = "川"
+used_in = ["訓"]
+reason = "Only used in one kanji."
+
+[[non-useful]]
+component = "大"
+used_in = ["泰", "達"]
+reason = "Poor reading agreement."
+
+[[useful]]
+component = "土"
+used_in = ["吐", "徒"]
+not_useful_in = ["社"]
+readings = ["ト"]
+
+[[useful]]
+component = "女"
+used_in = ["奴", "努", "怒", "如"]
+not_useful_in = []
+readings = ["ド", "ジョ"]
+
+# 4-Stroke
+# p 132
