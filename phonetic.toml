@@ -159,3 +159,21 @@ readings = ["ド", "ジョ"]
 
 # 4-Stroke
 # p 132
+
+[[useful]]
+component = "王"
+used_in = ["狂", "往", "皇"]
+not_useful_in = []
+readings = ["オウ", ""コウ" "キョウ"]
+
+[[useful]]
+component = "戸"
+used_in = ["雇", "顧"]
+not_useful_in = ["所"]
+readings = ["コ"]
+
+[[useful]]
+component = "五"
+used_in = ["悟", "語"]
+not_useful_in = []
+readings = ["ゴ"]
