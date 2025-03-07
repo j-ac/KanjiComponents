@@ -177,3 +177,97 @@ component = "五"
 used_in = ["悟", "語"]
 not_useful_in = []
 readings = ["ゴ"]
+
+[[non-useful]]
+component = "午"
+used_in = ["卸", "許", "御"]
+reason = "Poor reading agreement."
+
+[[useful]]
+component = "月"
+used_in = ["朝", "潮"]
+not_useful_in = []
+readings = ["チョウ"]
+
+# p 134
+[[useful]]
+component = "斤"
+used_in = ["近", "祈"]
+not_useful_in = []
+readings = ["キン", "キ"]
+
+[[useful]]
+component = "止"
+used_in = ["市", "姉", "祉", "歯"]
+not_useful_in = []
+readings = ["シ"]
+
+[[non-useful]]
+component = "氏"
+used_in = ["紙", "婚"]
+reason = "シ"
+
+[[useful]]
+component = "尺"
+used_in = ["択", "沢", "釈", "訳"]
+not_useful_in = ["駅"]
+readings = ["タク", "シャク", "ヤク"]
+
+[[useful]]
+component = "井"
+used_in = ["刑", "形", "型"]
+not_useful_in = ["耕"]
+readings = ["ケイ"]
+
+[[non-useful]]
+component = "升"
+used_in = ["昇"]
+reason = "Only used in one kanji."
+
+[[useful]]
+component = "中"
+used_in = ["仲", "沖", "忠", "衷"]
+not_useful_in = []
+readings = ["チュウ"]
+
+[[non-useful]]
+component = "屯"
+used_in = ["純 ", "鈍"]
+reason = "Poor reading agreement"
+
+# prime example of this book making the 
+# worst choices over and over.
+# 日 is listed as the radical even though
+# it does not have the reading
+# If you make the radical 冒 the analysis is perfect.
+[[useful]]
+component = "冒"
+used_in = ["帽"]
+not_useful_in = []
+readings = ["ボウ"]
+
+[[non-useful]]
+component = "比"
+used_in = ["階", "階"]
+reason = "Poor reading agreement."
+
+# No conceivable reason beyond historical interest that 父 should be considered the radical.
+# 布 Should be the radical, but its still just not useful.
+[[non-useful]]
+component = "父"
+used_in = ["布", "怖"]
+reason = "Used in too few kanji."
+
+# Habein Mathias uses 不 as this radical.
+# This makes no sense. I am ignoring it, and using 咅 instead.
+[[useful]]
+component = "咅"
+used_in = ["杯", "倍", "培", "陪","賠"]
+not_useful_in = ["否", "杯","剖", "部"]
+readings = ["ハイ", "バイ"]
+
+[[useful]]
+component = "方"
+used_in = ["芳", "坊", "妨", "防", "放", "房", "肪", "訪", "倣", "傍"]
+not_useful_in = []
+readings = ["ボウ", "ホウ"]
