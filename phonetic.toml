@@ -4,16 +4,16 @@
 # this list is very much a WORK IN PROGRESS and does not nearly cover everything, but I hope to complete the phonetic component at minimum.
 
 #TEMPLATES
-[[useful]]
-component = ""
-used_in = ["", "", ""]
-not_useful_in = []
-readings = [""]
+# [[useful]]
+# component = ""
+# used_in = ["", "", ""]
+# not_useful_in = []
+# readings = [""]
 
-[[non-useful]]
-component = ""
-used_in = ["", ""]
-reason = ""
+# [[non-useful]]
+# component = ""
+# used_in = ["", ""]
+# reason = ""
 
 #  ____ _____  _    ____ _____    ___  _____   _     ___ ____ _____
 # / ___|_   _|/ \  |  _ \_   _|  / _ \|  ___| | |   |_ _/ ___|_   _|
@@ -164,7 +164,7 @@ readings = ["ド", "ジョ"]
 component = "王"
 used_in = ["狂", "往", "皇"]
 not_useful_in = []
-readings = ["オウ", ""コウ" "キョウ"]
+readings = ["オウ", "コウ", "キョウ"]
 
 [[useful]]
 component = "戸"
