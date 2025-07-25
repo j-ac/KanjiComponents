@@ -19,15 +19,15 @@ def render_section(title, items):
     html += "</ul>"
     return html
 
-html = "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
+html = "<!DOCTYPE html>\n"
+html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
+html += "<p>This site is a work in progress</p>"
 html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
-html += "<p>" +  blurb + "</p>"
+html += blurb
 html += render_section("Useful Components", phon.get("useful", []))
 html += render_section("Non-Useful Components", phon.get("non-useful", []))
 html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
 html += "</body></html>"
 
 with open("docs/index.html", "w", encoding="utf-8") as f:
-    f.write("This kanji site is a work in progress")
-    f.write("<p> </p>")
     f.write(html)
