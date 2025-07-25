@@ -1,4 +1,5 @@
 import toml
+from datetime import date
 
 phon = toml.load("phonetic.toml")
 blurb = open("site_data/blurb.html", encoding="utf-8").read()
@@ -18,11 +19,12 @@ def render_section(title, items):
     html += "</ul>"
     return html
 
-html = "<html><head><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
+html = "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
 html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
-html += "<pre>" + blurb + "</pre><p> </p>"
+html += "<p>" +  blurb + "</p>"
 html += render_section("Useful Components", phon.get("useful", []))
 html += render_section("Non-Useful Components", phon.get("non-useful", []))
+html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
 html += "</body></html>"
 
 with open("docs/index.html", "w", encoding="utf-8") as f:
