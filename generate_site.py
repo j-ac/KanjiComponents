@@ -21,7 +21,7 @@ def render_section(title, items):
 
 html = "<!DOCTYPE html>\n"
 html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
-html += "<p>This site is a work in progress</p>"
+html += "<p>This site is a work in progress. Report any issues on <a href=\"https://github.com/j-ac/KanjiComponents/issues\">github</a>: </p>"
 html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
 html += blurb
 html += render_section("Useful Components", phon.get("useful", []))
