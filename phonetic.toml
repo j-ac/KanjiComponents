@@ -116,9 +116,9 @@ reason = "Poor reading agreement."
 
 [[useful]]
 component = "小"
-used_in = ["肖", "宵", "消", "硝"]
-not_useful_in = ["削"]
-readings = [""]
+used_in = ["肖", "消", "硝"]
+not_useful_in = ["削", "宵"]
+readings = ["ショウ"]
 
 [[non-useful]]
 component = "寸"
