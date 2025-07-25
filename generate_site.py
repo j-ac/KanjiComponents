@@ -15,7 +15,7 @@ def render_section(title, items):
             html += f" (Readings: {readings})"
         if 'reason' in item:
             html += f" — <em>{item['reason']}</em>"
-        html += "</li>"
+        html += "</li>\n"
     html += "</ul>"
     return html
 
