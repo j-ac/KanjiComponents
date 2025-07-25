@@ -205,7 +205,7 @@ readings = ["シ"]
 [[non-useful]]
 component = "氏"
 used_in = ["紙", "婚"]
-reason = "シ"
+reason = "poor reading agreement."
 
 [[useful]]
 component = "尺"
