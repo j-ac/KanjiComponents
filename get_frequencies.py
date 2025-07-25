@@ -23,9 +23,10 @@ def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tu
     # used_in = ["受", "授"]
     # readings = ["ジュ"]
     #
-    # Creates this mapping:
+    # Maps this in the kanji_component dictionary:
     # 受 -> 又 and 授 -> 又 
     # 
+    # And this in kanji_readings dictionary:
     # 受 -> ["ジュ"] and 授 -> ["ジュ"]
     print("Processing Toml")
 
@@ -54,7 +55,7 @@ def process_toml(debug_toml:bool=True, debug_kanji_to_component:bool=True) -> Tu
 
 # Turns a word which may contain a mix of hiragana, katakana and kanji into just the readings of the kanji, in katakana.
 # Eg 楽しい -> タノ
-def word_to_kanji_readings(word, data):
+def word_to_kanji_readings(word, data) -> str:
     # Example: 楽しい 
     if "form" in data:
         form = data["form"]                 # eg タノシイ
@@ -87,9 +88,30 @@ def word_to_kanji_readings(word, data):
     match = re.match(regex_str, form)
 
     if match is not None and len(match.groups()) >= 1:
-        print(word)
-        pprint.pprint(match[1])
-        print("===")
+        #print(word + "\t" + match[1] + "\n")
+        return match[1]
+
+# Given a word, returns that word with only its kanji characters. Assumes kanji are contiguous (which should always be true) 
+def as_kanji_only(word) -> str:
+    return "".join(char for char in word if 0x4E00 <= ord(char) <= 0x9FFF)
+
+
+# Given a kanji word, and its katakana readings. Increment the recorded frequencies for the readings used.
+def analyze_reading_use(word, kana, kanji_dict):
+    original_word = word
+    word = as_kanji_only(word)
+    if kana is not None:
+        print("kanji are: " + word + "\treading is " + kana)
+
+        for kanji in word:
+            for reading in kanji_dict.get(kanji):
+                if  kana.startswith(reading):
+                    kana.removeprefix(reading)
+                    break
+                    
+            print("Failed to find a reading for " + kanji + "in " + original_word)
+
+
 
 
 def get_freqs(kanji_component, kanji_readings, kanji_dict):
@@ -99,10 +121,14 @@ def get_freqs(kanji_component, kanji_readings, kanji_dict):
         for sentence in corpus: 
             sentence_data = get_mecab.get_mecab_data(sentence, verbose=False, tagger=tagger)
             for word in sentence_data.keys():
-                word_to_kanji_readings(word, sentence_data[word])
+                reading = word_to_kanji_readings(word, sentence_data[word])
+                analyze_reading_use(word, reading, kanji_dict)
+
+                
                 
 
-
+# kanji_component: 受 -> 又 and 授 -> 又 ...
+# kanji_readings: 受 -> ["ジュ"] and 授 -> ["ジュ"] ...
 kanji_component, kanji_readings = process_toml()
 kanji_dict = get_kanjidict.get_readings_dictionary()
 get_freqs(kanji_component, kanji_readings, kanji_dict)
