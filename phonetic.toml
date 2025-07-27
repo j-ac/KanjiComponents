@@ -271,3 +271,30 @@ component = "方"
 used_in = ["芳", "坊", "妨", "防", "放", "房", "肪", "訪", "倣", "傍"]
 not_useful_in = []
 readings = ["ボウ", "ホウ"]
+
+[[non-useful]]
+component = "毛"
+used_in = ["耗"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "木"
+used_in = ["新", "親", "薪"]
+reason = "辛 is the informative analysis"
+
+[[non-useful]]
+component = "文"
+used_in = ["蚊", "紋"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "予"
+used_in = ["序", "野", "預"]
+reason = "Poor reading agreement"
+
+# 5 - stroke
+[[useful]]
+component = "甘"
+used_in = ["勘", "敢", "堪"]
+not_useful_in = ["紺", "厳"]
+readings = ["カン"]
