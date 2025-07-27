@@ -298,3 +298,75 @@ component = "甘"
 used_in = ["勘", "敢", "堪"]
 not_useful_in = ["紺", "厳"]
 readings = ["カン"]
+
+# 岬 only has readings matching the radical on incredibly rare words.
+[[non-useful]]
+component = "甲"
+used_in = ["押", "岬"]
+reason = "Poor reading agreement"
+
+# 据 Is listed as using a radical derived from 古, but not 古 directly. These generally aren't helpful.
+[[useful]]
+component = "古"
+used_in = ["居", "固", "故", "枯", "個", "湖"]
+not_useful_in = ["苦", "箇"]
+readings = [""]
+
+[[non-useful]]
+component = "去"
+used_in = ["却", "脚"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "示, 礻"
+used_in = ["視"]
+reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "且"
+used_in = ["助", "阻", "祖", "粗", "組", "租"]
+not_useful_in = ["助", "査"]
+readings = ["ソ", "ジョ"]
+
+[[non-useful]]
+component = "石"
+used_in = ["拓"]
+reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "生"
+used_in = ["姓", "性", "星", "牲"]
+not_useful_in = []
+readings = ["セイ"]
+
+
+[[useful]]
+component = "申"
+used_in = ["伸", "神", "陣", "紳", "陳"]
+not_useful_in = ["電"]
+readings = ["シン", "ジン", "チン"]
+
+# p 143
+# The book mentions 往 but its radical is considered different
+[[useful]]
+component = "主"
+used_in = ["注", "柱", "駐", "住"]
+not_useful_in = [""]
+readings = ["チュウ", "ジュウ"]
+
+[[non-useful]]
+component = "出"
+used_in = ["拙"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "田"
+used_in = ["細"]
+reason = "Only used in 1 kanji"
+
+# 144
+[[useful]]
+component = "白"
+used_in = ["伯", "拍", "泊", "迫", "舶"]
+not_useful_in = [""]
+readings = ["ハク"]
