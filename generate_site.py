@@ -24,8 +24,9 @@ html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset=
 html += "<p>This site is a work in progress. Report any issues on <a href=\"https://github.com/j-ac/KanjiComponents/issues\">github</a>: </p>"
 html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
 html += blurb
-html += render_section("Useful Components", phon.get("useful", []))
-html += render_section("Non-Useful Components", phon.get("non-useful", []))
+html += render_section("Useful Phonetic Components", phon.get("useful", []))
+html += render_section("Non-Useful Phonetic Components", phon.get("non-useful", []))
+html += "<p> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</p>"
 html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
 html += "</body></html>"
 
