@@ -61,7 +61,7 @@ readings = ["ショウ"]
 [[non-useful]]
 component = "人"
 used_in = ["仁"]
-reason = "used in one kanji"
+reason = "used in 1 kanji"
 
 [[non-useful]]
 component = "ニ"
@@ -128,17 +128,17 @@ reason = "Poor reading agreement."
 [[non-useful]]
 component = "夕"
 used_in = ["外"]
-reason = "Only used in one kanji."
+reason = "Only used in 1 kanji."
 
 [[non-useful]]
 component = "山"
 used_in = ["仙"]
-reason = "Only used in one kanji."
+reason = "Only used in 1 kanji."
 
 [[non-useful]]
 component = "川"
 used_in = ["訓"]
-reason = "Only used in one kanji."
+reason = "Only used in 1 kanji."
 
 [[non-useful]]
 component = "大"
@@ -222,7 +222,7 @@ readings = ["ケイ"]
 [[non-useful]]
 component = "升"
 used_in = ["昇"]
-reason = "Only used in one kanji."
+reason = "Only used in 1 kanji."
 
 [[useful]]
 component = "中"
@@ -364,9 +364,103 @@ component = "田"
 used_in = ["細"]
 reason = "Only used in 1 kanji"
 
-# 144
+# p 144
 [[useful]]
 component = "白"
 used_in = ["伯", "拍", "泊", "迫", "舶"]
 not_useful_in = [""]
 readings = ["ハク"]
+
+[[non-useful]]
+component = "丙"
+used_in = ["柄", "病"]
+reason = "Phonetic is Exceptionally rare"
+
+[[non-useful]]
+component = "平"
+used_in = ["坪", "評"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "北"
+used_in = ["背"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "民"
+used_in = ["眠", "婚"]
+reason = "Poor reading agreement"
+
+# p 144
+[[useful]]
+component = "予"
+used_in = ["務", "務"]
+not_useful_in = [""]
+readings = ["ム"]
+
+[[non-useful]]
+component = "由"
+used_in = ["抽", "宙", "届", "油", "笛", "軸"]
+reason = "Poor reading agreement"
+
+# p 146
+[[non-useful]]
+component = "用"
+used_in = ["庸", "踊", "勇", "通", "痛"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "立"
+used_in = ["粒"]
+reason = "only used in 1 kanji"
+
+[[useful]]
+component = "衣"
+used_in = ["依", "哀"]
+not_useful_in = [""]
+readings = ["イ", "アイ"]
+
+# p147
+[[useful]]
+component = "交"
+used_in = ["効", "郊", "校", "絞", "較"]
+not_useful_in = [""]
+readings = ["コウ"]
+
+[[non-useful]]
+component = "行"
+used_in = ["衡"]
+reason = "only used in 1 kanji"
+
+[[non-useful]]
+component = "舟"
+used_in = ["受", "授", "朝", "潮"]
+reason = "radical is not clear in the kanji"
+
+# p 148
+[[non-useful]]
+component = "虫"
+used_in = ["融"]
+reason = "only used in 1 kanji"
+
+# p147
+[[useful]]
+component = "兆"
+used_in = ["挑", "逃", "桃", "眺", "跳"]
+not_useful_in = [""]
+readings = ["チョウ", "トウ"]
+
+[[non-useful]]
+component = "竹"
+used_in = ["築", "篤"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "耳"
+used_in = ["恥", "敢"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "米"
+used_in = ["迷"]
+reason = "Only used in 1 kanji"
