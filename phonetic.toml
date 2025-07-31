@@ -443,7 +443,6 @@ component = "虫"
 used_in = ["融"]
 reason = "only used in 1 kanji"
 
-# p147
 [[useful]]
 component = "兆"
 used_in = ["挑", "逃", "桃", "眺", "跳"]
