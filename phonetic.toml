@@ -310,7 +310,7 @@ reason = "Poor reading agreement"
 component = "古"
 used_in = ["居", "固", "故", "枯", "個", "湖"]
 not_useful_in = ["苦", "箇"]
-readings = [""]
+readings = ["コ"]
 
 [[non-useful]]
 component = "去"
