@@ -463,3 +463,22 @@ reason = "Poor reading agreement"
 component = "米"
 used_in = ["迷"]
 reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "羊"
+used_in = ["洋", "祥", "詳", "様", "養", "窯"]
+not_useful_in = [""]
+readings = ["ヨウ", "ショウ"]
+
+[[non-useful]]
+component = "亜"
+used_in = ["悪"]
+reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "求"
+used_in = ["救", "救"]
+not_useful_in = [""]
+readings = ["キュウ"]
+
+# p 150
