@@ -504,7 +504,7 @@ used_in = ["痘", "頭", "闘"]
 not_useful_in = ["樹"]
 readings = ["トウ"]
 
-# 151
+# p 151
 [[non-useful]]
 component = "足"
 used_in = ["促"]
@@ -515,7 +515,15 @@ component = "貝"
 used_in = ["貞", "敗", "偵"]
 reason = "Poor reading agreement"
 
+[[useful]]
+component = "良"
+used_in = ["郎", "朗", "浪", "廊"]
+not_useful_in = ["娘"]
+readings = ["ロウ"]
+
+# p 152
+
 [[non-useful]]
-component = ""
-used_in = [""]
+component = "易"
+used_in = ["賜"]
 reason = "Only used in 1 kanji"
