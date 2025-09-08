@@ -482,3 +482,40 @@ not_useful_in = [""]
 readings = ["キュウ"]
 
 # p 150
+[[non-useful]]
+component = "車"
+used_in = ["陣"]
+reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "辛"
+used_in = ["親", "新", "薪"]
+not_useful_in = [""]
+readings = ["シン"]
+
+[[non-useful]]
+component = "臣"
+used_in = ["姫"]
+reason = "Only used in 1 kanji"
+
+[[useful]]
+component = "豆"
+used_in = ["痘", "頭", "闘"]
+not_useful_in = ["樹"]
+readings = ["トウ"]
+
+# 151
+[[non-useful]]
+component = "足"
+used_in = ["促"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "貝"
+used_in = ["貞", "敗", "偵"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = ""
+used_in = [""]
+reason = "Only used in 1 kanji"
