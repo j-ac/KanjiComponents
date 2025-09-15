@@ -21,47 +21,55 @@ def render_section(title, items):
     html += "</ul>"
     return html
 
-# Main page html
-main_html = "<!DOCTYPE html>\n"
-main_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
-main_html += github_message
-main_html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
-main_html += blurb
-main_html += render_section("Useful Phonetic Components", phon.get("useful", []))
-main_html += "<p><a href=\"non_useful_phonetic.html\">View non-useful phonetic components</a></p>\n"
-main_html += "<footer>"
-main_html += "<p><em> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</em></p>"
-main_html += f"<p><em>This site was last updated on {date.today().isoformat()}.</em></p>"
-main_html += "</footer>"
-main_html += "</body></html>"
-
-with open("docs/index.html", "w", encoding="utf-8") as f:
-    f.write(main_html)
-
-# Non-useful phonetic page
-phon_non_html = "<!DOCTYPE html>\n"
-phon_non_html += "<p><a href=\"index.html\">Home</a></p>"
-phon_non_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Non-Useful Phonetic Kanji Components</title></head><body>\n"
-phon_non_html += github_message
-phon_non_html += "<p><b>I do not reccomend studying these kanji </b> as they are <b>not useful</b>. I keep them here for the sake of this site being complete, and because I cannot be certain I did not make any mistakes when I wrote it. Some may move to the main list if I find they were more useful than I gave them credit for.</p>\n"
-phon_non_html += render_section("Non-Useful Phonetic Components\n", phon.get("non-useful", []))
-phon_non_html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
-phon_non_html += "</body></html>"
-
-with open("docs/non_useful_phonetic.html", "w", encoding="utf-8") as f:
-    f.write(phon_non_html)
-
-kanji_set = set([])
-for usefulness, data in phon.items():
-    for entry in data:
-        kanji_set.add(entry["component"][0])
-        for kanji in entry["used_in"]:
-            kanji_set.add(kanji)
-
-        if "not_useful_in" in entry:
-            for kanji in entry["not_useful_in"]:
+def calculate_progress():
+    kanji_set = set([])
+    for usefulness, data in phon.items():
+        for entry in data:
+            kanji_set.add(entry["component"][0])
+            for kanji in entry["used_in"]:
                 kanji_set.add(kanji)
 
-num_kanji = len(kanji_set)
-percentage = num_kanji / TOTAL_KANJI * 100
-print(f"{num_kanji} / {TOTAL_KANJI} ({percentage:.1f}%)")
+            if "not_useful_in" in entry:
+                for kanji in entry["not_useful_in"]:
+                    kanji_set.add(kanji)
+
+    num_kanji = len(kanji_set)
+    percentage = num_kanji / TOTAL_KANJI * 100
+    print(f"Completion: {num_kanji} / {TOTAL_KANJI} ({percentage:.1f}%)")
+    return round(percentage, 1)
+
+def main():
+    # Main page html
+    main_html = "<!DOCTYPE html>\n"
+    main_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
+    main_html += github_message
+    main_html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
+    main_html += blurb
+    main_html += render_section("Useful Phonetic Components", phon.get("useful", []))
+    main_html += "<p><a href=\"non_useful_phonetic.html\">View non-useful phonetic components</a></p>\n"
+    main_html += "<footer>"
+    main_html += "<p><em> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</em></p>"
+    main_html += f"<p><em>This site was last updated on {date.today().isoformat()}.</em></p>"
+    main_html += "</footer>"
+    main_html += "</body></html>"
+
+    with open("docs/index.html", "w", encoding="utf-8") as f:
+        f.write(main_html)
+
+    # Non-useful phonetic page
+    phon_non_html = "<!DOCTYPE html>\n"
+    phon_non_html += "<p><a href=\"index.html\">Home</a></p>"
+    phon_non_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Non-Useful Phonetic Kanji Components</title></head><body>\n"
+    phon_non_html += github_message
+    phon_non_html += "<p><b>I do not reccomend studying these kanji </b> as they are <b>not useful</b>. I keep them here for the sake of this site being complete, and because I cannot be certain I did not make any mistakes when I wrote it. Some may move to the main list if I find they were more useful than I gave them credit for.</p>\n"
+    phon_non_html += render_section("Non-Useful Phonetic Components\n", phon.get("non-useful", []))
+    phon_non_html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
+    phon_non_html += "</body></html>"
+
+    with open("docs/non_useful_phonetic.html", "w", encoding="utf-8") as f:
+        f.write(phon_non_html)
+
+    calculate_progress()
+
+if __name__ == "__main__":
+    main()
