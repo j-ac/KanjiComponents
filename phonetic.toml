@@ -522,8 +522,30 @@ not_useful_in = ["娘"]
 readings = ["ロウ"]
 
 # p 152
-
 [[non-useful]]
 component = "易"
 used_in = ["賜"]
 reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "育"
+used_in = ["充", "統", "銃"]
+reason = "Questionable radical. Poor reading agreement"
+
+[[useful]]
+component = "京"
+used_in = ["景", "鯨"]
+readings = ["ケイ", "ゲイ"]
+
+# Note: Habein and Mathias do not consider this a radical
+# They consider it an instance of the 京 radical. But as it does not assist as a
+# mnemonic device I have broken it out as a non-helpful radical.
+[[non-useful]]
+component = "景"
+used_in = ["影"]
+reason = "Only used in one kanji."
+
+[[useful]]
+component = "斉"
+used_in = ["剤", "斎", "済"]
+readings = ["サイ", "ザイ", "セイ"]
