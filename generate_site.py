@@ -27,9 +27,11 @@ main_html += github_message
 main_html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
 main_html += blurb
 main_html += render_section("Useful Phonetic Components", phon.get("useful", []))
-main_html += "<p><a href=\"non_useful_phonetic.html\">View non-useful phonetic components</a></p>"
-main_html += "<p> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</p>"
-main_html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
+main_html += "<p><a href=\"non_useful_phonetic.html\">View non-useful phonetic components</a></p>\n"
+main_html += "<footer>"
+main_html += "<p><em> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</em></p>"
+main_html += f"<p><em>This site was last updated on {date.today().isoformat()}.</em></p>"
+main_html += "</footer>"
 main_html += "</body></html>"
 
 with open("docs/index.html", "w", encoding="utf-8") as f:
@@ -41,7 +43,7 @@ phon_non_html += "<p><a href=\"index.html\">Home</a></p>"
 phon_non_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Non-Useful Phonetic Kanji Components</title></head><body>\n"
 phon_non_html += github_message
 phon_non_html += "<p><b>I do not reccomend studying these kanji </b> as they are <b>not useful</b>. I keep them here for the sake of this site being complete, and because I cannot be certain I did not make any mistakes when I wrote it. Some may move to the main list if I find they were more useful than I gave them credit for.</p>\n"
-phon_non_html += render_section("Non-Useful Phonetic Components", phon.get("non-useful", []))
+phon_non_html += render_section("Non-Useful Phonetic Components\n", phon.get("non-useful", []))
 phon_non_html += f"<footer><p><em>This site was last updated on {date.today().isoformat()}.</em></p></footer>"
 phon_non_html += "</body></html>"
 
