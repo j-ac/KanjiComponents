@@ -1,6 +1,7 @@
 import toml
 from datetime import date
 
+TOTAL_KANJI = 1945
 phon = toml.load("phonetic.toml")
 blurb = open("site_data/blurb.html", encoding="utf-8").read()
 github_message = "<p>This site is a work in progress. Report any issues on <a href=\"https://github.com/j-ac/KanjiComponents/issues\">github</a>: </p>\n"
@@ -49,3 +50,18 @@ phon_non_html += "</body></html>"
 
 with open("docs/non_useful_phonetic.html", "w", encoding="utf-8") as f:
     f.write(phon_non_html)
+
+kanji_set = set([])
+for usefulness, data in phon.items():
+    for entry in data:
+        kanji_set.add(entry["component"][0])
+        for kanji in entry["used_in"]:
+            kanji_set.add(kanji)
+
+        if "not_useful_in" in entry:
+            for kanji in entry["not_useful_in"]:
+                kanji_set.add(kanji)
+
+num_kanji = len(kanji_set)
+percentage = num_kanji / TOTAL_KANJI * 100
+print(f"{num_kanji} / {TOTAL_KANJI} ({percentage:.1f}%)")
