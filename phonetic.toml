@@ -549,3 +549,36 @@ reason = "Only used in one kanji."
 component = "斉"
 used_in = ["剤", "斎", "済"]
 readings = ["サイ", "ザイ", "セイ"]
+
+# p 153
+[[useful]]
+component = "長"
+used_in = ["張", "帳", "脹"]
+readings = ["チョウ"]
+
+[[non-useful]]
+component = "東"
+used_in = ["凍", "陳", "棟", "練", "鍊", "欄"]
+reason = "Poor reading agreement"
+
+# p 154
+[[useful]]
+component = "非"
+used_in = ["俳", "排", "悲", "扉", "輩"]
+readings = ["ヒ", "ハイ"]
+
+[[non-useful]]
+component = "門"
+used_in = ["間", "問"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "単"
+used_in = ["禅", "弾", "戦"]
+reason = "Poor reading agreement"
+
+# p 155
+[[non-useful]]
+component = "献"
+used_in = ["南"]
+reason = "Only used in one kanji"
