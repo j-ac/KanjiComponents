@@ -582,3 +582,36 @@ reason = "Poor reading agreement"
 component = "献"
 used_in = ["南"]
 reason = "Only used in one kanji"
+
+[[useful]]
+component = "高"
+used_in = ["豪", "稿", "橋", "矯"]
+readings = ["コウ", "ごう", "キョウ"]
+
+[[non-useful]]
+component = "竜"
+used_in = ["滝"]
+reason = "Only used in one kanji"
+
+[[non-useful]]
+component = "魚"
+used_in = ["漁"]
+reason = "Only used in one kanji"
+
+[[non-useful]]
+component = "鳥"
+used_in = ["島"]
+reason = "Only used in one kanji"
+
+# p 156
+[[non-useful]]
+component = "象"
+used_in = ["像"]
+reason = "Only used in one kanji"
+
+[[useful]]
+# Note: 急 is listed as using this radical.
+# It is highly obscured so I won't count it even as a "not_useful_in"
+component = "及"
+used_in = ["吸", "級"]
+readings = [""]
