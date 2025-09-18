@@ -586,7 +586,7 @@ reason = "Only used in one kanji"
 [[useful]]
 component = "高"
 used_in = ["豪", "稿", "橋", "矯"]
-readings = ["コウ", "ごう", "キョウ"]
+readings = ["コウ", "ゴウ", "キョウ"]
 
 [[non-useful]]
 component = "竜"
@@ -614,4 +614,4 @@ reason = "Only used in one kanji"
 # It is highly obscured so I won't count it even as a "not_useful_in"
 component = "及"
 used_in = ["吸", "級"]
-readings = [""]
+readings = ["キュウ"]

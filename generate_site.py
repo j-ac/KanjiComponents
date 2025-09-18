@@ -37,13 +37,42 @@ def render_section(title, items):
     html += "</ul>"
     return html
 
+def row_html(data: list) -> str:
+    html = "<tr>"
+    for e in data:
+        html += f"<td>{e}</td>"
+
+    html += "</tr>\n"
+    return html
+
+def generate_useful_table_html(items):
+    html = "<table>"
+    html += """
+    <thead>
+        <tr>
+            <th> Component </th>
+            <th> Used In </th>
+            <th> Readings </th>
+        </tr>
+    </thead>
+    """
+    html += "<tbody>\n"
+    for item in items:
+        comp = item['component']
+        used = ", ".join(item['used_in'])
+        readings = ", ".join(item['readings'])
+        html += row_html([comp, used, readings])
+
+    html += "</tbody>\n</table>"
+    return html
+
 def render_main_page(phon):
     main_html = "<!DOCTYPE html>\n"
     main_html += "<html><head><link rel=\"stylesheet\" href=\"styles.css\"><meta charset='UTF-8'><title>Kanji Components</title></head><body>"
     main_html += github_message
     main_html += "<h1>Kanji - The Way They Were Meant To Be</h1>"
     main_html += blurb
-    main_html += render_section("Useful Phonetic Components", phon.get("useful", []))
+    main_html += generate_useful_table_html(phon.get("useful", []))
     main_html += "<p><a href=\"non_useful_phonetic.html\">View non-useful phonetic components</a></p>\n"
     main_html += "<footer>"
     main_html += "<p><em> The primary source for this site is The Complete Guide to Everyday Kanji by Yaeko Habein and Gerald Mathias. The distinction between \"useful\" and \"non-useful\" components is my own and not found in the text.</em></p>"
