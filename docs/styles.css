@@ -73,3 +73,7 @@ tbody tr:hover {
   background-color: #f1f7ff;
 }
 
+.help {
+    cursor: help; /* shows a question mark on hover */
+    text-decoration: underline dotted; /* optional visual hint */
+}

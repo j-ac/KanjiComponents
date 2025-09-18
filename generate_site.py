@@ -5,6 +5,15 @@ TOTAL_KANJI = 1945
 blurb = open("site_data/blurb.html", encoding="utf-8").read()
 github_message = "<p>This site is a work in progress. Report any issues on <a href=\"https://github.com/j-ac/KanjiComponents/issues\">github</a>: </p>\n"
 
+# Given the useful kanji dict, append a "score" parameter based on how many kanji use it and how many readings apply
+def add_usefulness_score_to_dict(useful: list):
+    MANY_READINGS_PENALTY = 2/3
+    for entry in useful:
+        base = len(entry["used_in"]) - 2 * len(entry["not_useful_in"])
+        score = base * (MANY_READINGS_PENALTY) ** (len(entry["readings"]) - 1)
+        score = round(score, 1)
+        entry["score"]  = score
+
 def calculate_progress(phon):
     kanji_set = set([])
     for usefulness, data in phon.items():
@@ -53,15 +62,17 @@ def generate_useful_table_html(items):
             <th> Component </th>
             <th> Used In </th>
             <th> Readings </th>
+            <th title="This score is higher for components that are useful in many kanji, useless in few (ideally 0) kanji, and have few readings." class ="help"> Usefulness Score </th>
         </tr>
     </thead>
     """
     html += "<tbody>\n"
-    for item in items:
+    for item in sorted(items, key=lambda x: x['score'], reverse=True):
         comp = item['component']
         used = ", ".join(item['used_in'])
         readings = ", ".join(item['readings'])
-        html += row_html([comp, used, readings])
+        score = item['score']
+        html += row_html([comp, used, readings, score])
 
     html += "</tbody>\n</table>"
     return html
@@ -98,6 +109,7 @@ def render_non_useful_page(phon):
 
 def main():
     phon = toml.load("phonetic.toml")
+    add_usefulness_score_to_dict(phon["useful"])
 
     render_main_page(phon)
     render_non_useful_page(phon)

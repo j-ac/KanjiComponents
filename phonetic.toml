@@ -32,6 +32,7 @@ reason = "only 1 kanji"
 component = "又"
 used_in = ["受", "授"]
 readings = ["ジュ"]
+not_useful_in = []
 
 [[non-useful]]
 component = "九"
@@ -42,6 +43,8 @@ reason = "poor reading agreement."
 component = "七"
 used_in = ["切", "窃"]
 readings = ["セツ"]
+not_useful_in = []
+
 
 [[non-useful]]
 component = "十"
@@ -52,11 +55,13 @@ reason = "poor reading agreement"
 component = "丁"
 used_in = ["庁", "成", "町", "亭", "頂", "城", "盛", "貯"]
 readings = ["チョウ", "ジョウ"]
+not_useful_in = []
 
 [[useful]]
 component = "刀, 刂"
 used_in = ["召", "招", "沼", "昭", "紹", "詔", "超", "照"]
 readings = ["ショウ"]
+not_useful_in = []
 
 [[non-useful]]
 component = "人"
@@ -73,6 +78,7 @@ reason = "poor reading agreement."
 component = "干"
 used_in = ["刊", "汗", "肝", "軒", "幹", "岸"]
 readings = ["カン"]
+not_useful_in = []
 
 [[non-useful]]
 component = "弓"
@@ -260,6 +266,7 @@ reason = "Used in too few kanji."
 
 # Habein Mathias uses 不 as this radical.
 # This makes no sense. I am ignoring it, and using 咅 instead.
+# TODO: Give this one another look
 [[useful]]
 component = "咅"
 used_in = ["杯", "倍", "培", "陪","賠"]
@@ -351,7 +358,7 @@ readings = ["シン", "ジン", "チン"]
 [[useful]]
 component = "主"
 used_in = ["注", "柱", "駐", "住"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["チュウ", "ジュウ"]
 
 [[non-useful]]
@@ -368,7 +375,7 @@ reason = "Only used in 1 kanji"
 [[useful]]
 component = "白"
 used_in = ["伯", "拍", "泊", "迫", "舶"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["ハク"]
 
 [[non-useful]]
@@ -395,7 +402,7 @@ reason = "Poor reading agreement"
 [[useful]]
 component = "予"
 used_in = ["務", "務"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["ム"]
 
 [[non-useful]]
@@ -417,14 +424,14 @@ reason = "only used in 1 kanji"
 [[useful]]
 component = "衣"
 used_in = ["依", "哀"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["イ", "アイ"]
 
 # p147
 [[useful]]
 component = "交"
 used_in = ["効", "郊", "校", "絞", "較"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["コウ"]
 
 [[non-useful]]
@@ -446,7 +453,7 @@ reason = "only used in 1 kanji"
 [[useful]]
 component = "兆"
 used_in = ["挑", "逃", "桃", "眺", "跳"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["チョウ", "トウ"]
 
 [[non-useful]]
@@ -467,7 +474,7 @@ reason = "Only used in 1 kanji"
 [[useful]]
 component = "羊"
 used_in = ["洋", "祥", "詳", "様", "養", "窯"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["ヨウ", "ショウ"]
 
 [[non-useful]]
@@ -478,7 +485,7 @@ reason = "Only used in 1 kanji"
 [[useful]]
 component = "求"
 used_in = ["救", "救"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["キュウ"]
 
 # p 150
@@ -490,7 +497,7 @@ reason = "Only used in 1 kanji"
 [[useful]]
 component = "辛"
 used_in = ["親", "新", "薪"]
-not_useful_in = [""]
+not_useful_in = []
 readings = ["シン"]
 
 [[non-useful]]
@@ -536,6 +543,7 @@ reason = "Questionable radical. Poor reading agreement"
 component = "京"
 used_in = ["景", "鯨"]
 readings = ["ケイ", "ゲイ"]
+not_useful_in = []
 
 # Note: Habein and Mathias do not consider this a radical
 # They consider it an instance of the 京 radical. But as it does not assist as a
@@ -549,12 +557,14 @@ reason = "Only used in one kanji."
 component = "斉"
 used_in = ["剤", "斎", "済"]
 readings = ["サイ", "ザイ", "セイ"]
+not_useful_in = []
 
 # p 153
 [[useful]]
 component = "長"
 used_in = ["張", "帳", "脹"]
 readings = ["チョウ"]
+not_useful_in = []
 
 [[non-useful]]
 component = "東"
@@ -566,6 +576,7 @@ reason = "Poor reading agreement"
 component = "非"
 used_in = ["俳", "排", "悲", "扉", "輩"]
 readings = ["ヒ", "ハイ"]
+not_useful_in = []
 
 [[non-useful]]
 component = "門"
@@ -587,6 +598,7 @@ reason = "Only used in one kanji"
 component = "高"
 used_in = ["豪", "稿", "橋", "矯"]
 readings = ["コウ", "ゴウ", "キョウ"]
+not_useful_in = []
 
 [[non-useful]]
 component = "竜"
@@ -615,3 +627,4 @@ reason = "Only used in one kanji"
 component = "及"
 used_in = ["吸", "級"]
 readings = ["キュウ"]
+not_useful_in = []
