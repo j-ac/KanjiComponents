@@ -615,6 +615,8 @@ component = "鳥"
 used_in = ["島"]
 reason = "Only used in one kanji"
 
+# SEMANTIC COMPOUNDS USED AS PHONETIC COMPOUNDS
+
 # p 156
 [[non-useful]]
 component = "象"
@@ -628,3 +630,16 @@ component = "及"
 used_in = ["吸", "級"]
 readings = ["キュウ"]
 not_useful_in = []
+
+[[useful]]
+component = "刃"
+used_in = ["忍", "認"]
+readings = ["ニン"]
+not_useful_in = []
+
+[[non-useful]]
+component = "凡"
+used_in = ["帆", "風"]
+reason = "Poor reading agreement"
+
+# p 157
