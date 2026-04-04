@@ -643,3 +643,43 @@ used_in = ["帆", "風"]
 reason = "Poor reading agreement"
 
 # p 157
+[[useful]]
+component = "亡"
+used_in = ["忙", "妄", "忘", "盲", "望", "網"]
+readings = ["モウ", "ボウ"]
+not_useful_in = []
+
+[[non-useful]]
+component = "区"
+used_in = ["欧", "殴", "枢", "駆"]
+reason = "Poor reading agreement"
+
+[[non-useful]]
+component = "凶"
+used_in = ["胸"]
+reason = "Only used in 1 kanji"
+
+# p 158
+
+[[non-useful]]
+component = "公"
+used_in = ["松", "翁", "訟"]
+reason = "Poor reading agreement"
+
+[[useful]]
+component = "化"
+used_in = ["花", "貨", "靴"]
+readings = ["カ", "ケ"]
+not_useful_in = []
+
+[[non-useful]]
+component = "介"
+used_in = ["界"]
+reason = "Only used in 1 kanji"
+
+[[non-useful]]
+component = "元"
+used_in = ["完", "冠", "頑", "院"]
+reason = "Poor reading agreement"
+
+# p 159
