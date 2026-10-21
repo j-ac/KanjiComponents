@@ -1,5 +1,5 @@
 # This document aims to be a complete list of all valuable phonetic kanji components sourced
-# from Habein & Mathias' "The Complete Guide to Everyday Kanji." The book is a trove of information, 
+# from Habein & Mathias' "The Complete Guide to Everyday Kanji." The book is a trove of information,
 # this seeks to distill it down to only the information useful to a student of Japanese.
 # this list is very much a WORK IN PROGRESS and does not nearly cover everything, but I hope to complete the phonetic component at minimum.
 
@@ -241,7 +241,7 @@ component = "屯"
 used_in = ["純 ", "鈍"]
 reason = "Poor reading agreement"
 
-# prime example of this book making the 
+# prime example of this book making the
 # worst choices over and over.
 # 日 is listed as the radical even though
 # it does not have the reading
@@ -660,7 +660,6 @@ used_in = ["胸"]
 reason = "Only used in 1 kanji"
 
 # p 158
-
 [[non-useful]]
 component = "公"
 used_in = ["松", "翁", "訟"]
@@ -683,3 +682,7 @@ used_in = ["完", "冠", "頑", "院"]
 reason = "Poor reading agreement"
 
 # p 159
+[[non-useful]]
+component = "今"
+used_in = ["含", "吟"]
+reason = "Poor reading agreement"
