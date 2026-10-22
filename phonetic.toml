@@ -684,5 +684,13 @@ reason = "Poor reading agreement"
 # p 159
 [[non-useful]]
 component = "今"
-used_in = ["含", "吟"]
+used_in = ["含", "吟", "金", "念", "琴", "陰", "飲"]
 reason = "Poor reading agreement"
+
+[[useful]]
+component = "支"
+used_in = ["岐", "技", "枝", "肢"]
+readings = ["キ", "ギ", "シ"]
+not_useful_in = []
+
+# p 160
